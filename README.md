@@ -1,4 +1,4 @@
-# php-simple-router
+# php-simple-mvc
 
 教學用的程式，純 PHP 實作極簡 Router 機制及簡易的 MVC 框架。  
 只使用 pure php ，不導入 .htaccess 且不使用 composer 等現代開發工具。  
