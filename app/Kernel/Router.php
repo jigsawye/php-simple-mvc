@@ -20,14 +20,17 @@ class Router
 
     public function get($uri, $action)
     {
-        if (($this->request_method == 'GET') && ($this->request_uri == $uri)) {
-            return $action();
-        }
+        return $this->checkRoute('GET', $uri, $action);
     }
 
     public function post($uri, $action)
     {
-        if (($this->request_method == 'POST') && ($this->request_uri == $uri)) {
+        return $this->checkRoute('POST', $uri, $action);
+    }
+
+    private function checkRoute($method, $uri, $action)
+    {
+        if (($this->request_method == $method) && ($this->request_uri == $uri)) {
             return $action();
         }
     }
