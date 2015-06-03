@@ -24,4 +24,11 @@ class Router
             return $action();
         }
     }
+
+    public function post($uri, $action)
+    {
+        if (($this->request_method == 'POST') && ($this->request_uri == $uri)) {
+            return $action();
+        }
+    }
 }
