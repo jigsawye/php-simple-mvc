@@ -4,16 +4,16 @@ class PagesController
 {
     public function index()
     {
-        return require_once __DIR__ . '/../Views/index.php';
+        return view('index');
     }
 
     public function contact()
     {
-        return require_once __DIR__ . '/../Views/contact.php';
+        return view('contact');
     }
 
     public function about()
     {
-        return require_once __DIR__ . '/../Views/about.php';
+        return view('about');
     }
 }
