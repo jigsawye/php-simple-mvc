@@ -2,7 +2,6 @@
 
 class Router
 {
-    private $request_params;
     private $request_uri;
     private $request_method;
 
