@@ -1,6 +1,8 @@
 <?php
     $router = new Router;
 
-    $router->get('/home', ['HomeController', 'index']);
+    $router->get('/', ['PagesController', 'index']);
 
-    $router->post('/test', ['HomeController', 'test']);
+    $router->get('/contact', ['PagesController', 'contact']);
+
+    $router->get('/about', ['PagesController', 'about']);
