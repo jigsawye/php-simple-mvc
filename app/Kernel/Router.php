@@ -31,7 +31,16 @@ class Router
     private function checkRoute($method, $uri, $action)
     {
         if (($this->request_method == $method) && ($this->request_uri == $uri)) {
-            return $action();
+            return $this->loadAction($action);
         }
+    }
+
+    private function loadAction($action)
+    {
+        require_once __DIR__ . '/../Controllers/' . $action[0] . '.php';
+
+        $controller = new $action[0];
+
+        return $controller->{$action[1]}();
     }
 }
