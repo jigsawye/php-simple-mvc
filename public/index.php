@@ -17,4 +17,4 @@
     /**
      * bootstrap the application.
      */
-    require_once __DIR__ . '/../app/route.php';
+    require_once __DIR__ . '/../app/routes.php';
