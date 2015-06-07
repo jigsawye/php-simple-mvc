@@ -28,7 +28,7 @@
             <div class="page-header text-center">
                 <h3>Contact Us</h3>
             </div>
-            <form class="form-horizontal" role="form" method="POST" action="">
+            <form class="form-horizontal" role="form" method="POST" action="/contact">
 
                 <div class="form-group">
                     <label class="col-md-4 control-label">Your Name</label>

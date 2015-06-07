@@ -4,6 +4,7 @@
     $route->get('/', ['PagesController', 'index']);
 
     $route->get('/contact', ['PagesController', 'contact']);
+    $route->post('/contact', ['PagesController', 'onContact']);
 
     $route->get('/about', ['PagesController', 'about']);
 
