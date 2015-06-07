@@ -4,16 +4,16 @@ class PagesController
 {
     public function index()
     {
-        return view('index');
+        return view('pages/index');
     }
 
     public function contact()
     {
-        return view('contact');
+        return view('pages/contact');
     }
 
     public function about()
     {
-        return view('about');
+        return view('pages/about');
     }
 }
