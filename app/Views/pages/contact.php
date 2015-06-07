@@ -45,7 +45,7 @@
                 </div>
 
                 <div class="form-group">
-                    <label class="col-md-4 control-label">Password</label>
+                    <label class="col-md-4 control-label">Message</label>
                     <div class="col-md-6">
                         <textarea class="form-control" name="message" rows="4"></textarea>
                     </div>
