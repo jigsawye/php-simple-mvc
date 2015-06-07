@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Register@Fake-Blog</title>
+    <title>Login@Fake-Blog</title>
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
