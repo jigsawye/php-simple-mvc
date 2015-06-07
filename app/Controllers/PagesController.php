@@ -14,16 +14,13 @@ class PagesController
 
     public function onContact()
     {
-        $model = model();
-        $model->sql = 'INSERT INTO contacts(name, email, message) VALUES(:name, :email, :message)';
+        $contact = model('Contact');
 
-        $model->params = [
+        $contact->create([
             ':name' => $_POST['name'],
             ':email' => $_POST['email'],
             ':message' => $_POST['message']
-        ];
-
-        $model->query();
+        ]);
 
         return redirect();
     }

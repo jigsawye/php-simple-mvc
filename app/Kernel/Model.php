@@ -3,8 +3,8 @@
 class Model
 {
     private $db;
-    public $sql = '';
-    public $params = [];
+    protected $sql = '';
+    protected $params = [];
 
     public function __construct()
     {

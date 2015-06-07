@@ -3,6 +3,7 @@
      * load kernel file.
      */
     require_once __DIR__ . '/../app/Kernel/Router.php';
+    require_once __DIR__ . '/../app/Kernel/Model.php';
 
     /**
      * load config file.
