@@ -1,8 +1,8 @@
 <?php
     define('URL', '');
 
-    define('DB', '');
-    define('HOST', '');
-    define('DB_NAME', '');
+    define('DB', 'mysql');
+    define('HOST', 'localhost');
+    define('DB_NAME', 'fake_blog');
     define('DB_USERNAME', '');
     define('DB_PASSWORD', '');

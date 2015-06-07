@@ -14,7 +14,17 @@ class PagesController
 
     public function onContact()
     {
-        // TODO: 新增Contact的資料至資料庫
+        $model = model();
+        $model->sql = 'INSERT INTO contacts(name, email, message) VALUES(:name, :email, :message)';
+
+        $model->params = [
+            ':name' => $_POST['name'],
+            ':email' => $_POST['email'],
+            ':message' => $_POST['message']
+        ];
+
+        $model->query();
+
         return redirect();
     }
 
