@@ -27,4 +27,12 @@ class Post extends Model
 
         return $this->query();
     }
+
+    public function update($params)
+    {
+        $this->sql = 'UPDATE posts SET title = :title, content = :content WHERE id = :id';
+        $this->params = $params;
+
+        return $this->query();
+    }
 }

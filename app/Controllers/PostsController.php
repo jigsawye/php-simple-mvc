@@ -53,7 +53,7 @@ class PostsController
     public function store()
     {
         $Post = model('Post');
-        $postId = $Post->create([
+        $Post->create([
             ':title' => $_POST['title'],
             ':content' => $_POST['content']
         ]);
@@ -87,7 +87,18 @@ class PostsController
      */
     public function update()
     {
+        $isNumber = preg_match('/^[1-9][0-9]*$/', $_GET['id']);
 
+        if ($isNumber) {
+            $Post = model('Post');
+            $Post->update([
+                ':id' => $_GET['id'],
+                ':title' => $_POST['title'],
+                ':content' => $_POST['content']
+            ]);
+        }
+
+        return redirect('/posts');
     }
 
     /**
