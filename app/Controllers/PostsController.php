@@ -42,7 +42,7 @@ class PostsController
      */
     public function create()
     {
-
+        return view('posts/create');
     }
 
     /**
@@ -62,7 +62,7 @@ class PostsController
      */
     public function edit()
     {
-
+        return view('posts/edit');
     }
 
     /**
