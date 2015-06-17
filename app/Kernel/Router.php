@@ -7,10 +7,7 @@ class Router
 
     public function __construct()
     {
-        // example http://localhost/index.php/home
-        // $_SERVER['REQUEST_URI'] 會是 /index.php/home
-        // /index.php 不是我們要的，所以把它切除
-        $uri = str_replace('/index.php', '', $_SERVER['REQUEST_URI']);
+        $uri = isset($_SERVER['PATH_INFO']) ? $_SERVER['PATH_INFO'] : '/';
 
         $this->request_uri = $uri;
         // GET or POST
