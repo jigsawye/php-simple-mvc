@@ -32,7 +32,7 @@
                     <a href="/posts/edit?id=<?=$post['id']?>" class="btn btn-primary navbar-right">Edit</a>
                 </div>
                 <div class="panel-body">
-                    <?=$post[0]['content']?>
+                    <?=nl2br($post[0]['content'])?>
                 </div>
             </div>
         </section>

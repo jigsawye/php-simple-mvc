@@ -108,6 +108,15 @@ class PostsController
      */
     public function delete()
     {
+        $isNumber = preg_match('/^[1-9][0-9]*$/', $_GET['id']);
 
+        if ($isNumber) {
+            $Post = model('Post');
+            $Post->delete([
+                ':id' => $_GET['id']
+            ]);
+        }
+
+        return redirect('/posts');
     }
 }

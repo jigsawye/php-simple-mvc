@@ -35,4 +35,12 @@ class Post extends Model
 
         return $this->query();
     }
+
+    public function delete($params)
+    {
+        $this->sql = 'DELETE FROM posts WHERE id = :id';
+        $this->params = $params;
+
+        return $this->query();
+    }
 }
