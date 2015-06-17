@@ -52,7 +52,13 @@ class PostsController
      */
     public function store()
     {
+        $Post = model('Post');
+        $postId = $Post->create([
+            ':title' => $_POST['title'],
+            ':content' => $_POST['content']
+        ]);
 
+        return redirect('/posts');
     }
 
     /**
