@@ -23,7 +23,16 @@ class PostsController
      */
     public function show()
     {
+        $isNumber = preg_match('/^[1-9][0-9]*$/', $_GET['id']);
 
+        if ($isNumber) {
+            $Post = model('Post');
+            $post = $Post->find($_GET['id']);
+
+            return view('posts/show', compact('post'));
+        } else {
+            return redirect('/posts');
+        }
     }
 
     /**
