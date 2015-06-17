@@ -1,7 +1,8 @@
 <?php
 
-function view($name)
+function view($name, $data)
 {
+    extract($data);
     return require __DIR__ . '/Views/' . $name . '.php';
 }
 

@@ -9,7 +9,11 @@ class PostsController
      */
     public function index()
     {
+        $Post = model('Post');
 
+        $posts = $Post->all();
+
+        return view('posts/index', compact('posts'));
     }
 
     /**

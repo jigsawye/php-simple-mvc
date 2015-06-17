@@ -12,10 +12,10 @@
 
     $route->get('/login', ['AuthController', 'login']);
 
-    $route->get('posts', ['PostsController', 'index']);
-    $route->get('posts/show', ['PostsController', 'show']);
-    $route->get('posts/create', ['PostsController', 'create']);
-    $route->post('posts/store', ['PostsController', 'store']);
-    $route->get('posts/edit', ['PostsController', 'edit']);
-    $route->post('posts/update', ['PostsController', 'update']);
-    $route->post('posts/delete', ['PostsController', 'delete']);
+    $route->get('/posts', ['PostsController', 'index']);
+    $route->get('/posts/show', ['PostsController', 'show']);
+    $route->get('/posts/create', ['PostsController', 'create']);
+    $route->post('/posts/store', ['PostsController', 'store']);
+    $route->get('/posts/edit', ['PostsController', 'edit']);
+    $route->post('/posts/update', ['PostsController', 'update']);
+    $route->post('/posts/delete', ['PostsController', 'delete']);

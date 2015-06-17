@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>About@Fake-Blog</title>
+    <title>Post@Fake-Blog</title>
     <link href="./assets/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
@@ -14,8 +14,8 @@
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav navbar-right">
                     <li><a href="/">Home</a></li>
-                    <li><a href="/posts">Post</a></li>
-                    <li class="active"><a href="/about">About</a></li>
+                    <li class="active"><a href="/posts">Post</a></li>
+                    <li><a href="/about">About</a></li>
                     <li><a href="/contact">Contact</a></li>
                     <li><a href="/register">Register</a></li>
                     <li><a href="/login">Login</a></li>
@@ -24,10 +24,15 @@
         </div>
     </nav>
 
-    <div class="jumbotron">
-        <div class="container">
-            <h1 class="text-center">About Page</h1>
-        </div>
+    <div class="container">
+        <section>
+            <div class="panel panel-default">
+            <div class="panel-heading"><?=$posts[0]['title']?></div>
+                <div class="panel-body">
+                    <?=$posts[0]['content']?>
+                </div>
+            </div>
+        </section>
     </div>
 
 </body>
