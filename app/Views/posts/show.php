@@ -27,7 +27,10 @@
     <div class="container">
         <section>
             <div class="panel panel-default">
-            <div class="panel-heading"><?=$post[0]['title']?></div>
+                <div class="panel-heading">
+                    <?=$post[0]['title']?>
+                    <a href="/posts/edit?id=<?=$post['id']?>" class="btn btn-primary navbar-right">Edit</a>
+                </div>
                 <div class="panel-body">
                     <?=$post[0]['content']?>
                 </div>

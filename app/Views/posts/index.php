@@ -25,14 +25,23 @@
     </nav>
 
     <div class="container">
-        <section>
-            <div class="panel panel-default">
-            <div class="panel-heading"><?=$posts[0]['title']?></div>
-                <div class="panel-body">
-                    <?=$posts[0]['content']?>
+        <?php
+        foreach ($posts as $post) :
+        ?>
+            <section>
+                <div class="panel panel-default">
+                <div class="panel-heading">
+                    <a href="/posts/show?id=<?=$post['id']?>"><?=$post['title']?></a>
+                    <a href="/posts/edit?id=<?=$post['id']?>" class="btn btn-primary navbar-right">Edit</a>
                 </div>
-            </div>
-        </section>
+                    <div class="panel-body">
+                        <?=$post['content']?>
+                    </div>
+                </div>
+            </section>
+        <?php
+        endforeach;
+        ?>
     </div>
 
 </body>
