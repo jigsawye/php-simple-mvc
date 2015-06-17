@@ -29,7 +29,7 @@
             <div class="panel panel-default">
                 <div class="panel-heading">
                     <?=$post[0]['title']?>
-                    <a href="/posts/edit?id=<?=$post['id']?>" class="btn btn-primary navbar-right">Edit</a>
+                    <a href="/posts/edit?id=<?=$post[0]['id']?>" class="btn btn-primary navbar-right">Edit</a>
                 </div>
                 <div class="panel-body">
                     <?=nl2br($post[0]['content'])?>
