@@ -68,7 +68,16 @@ class PostsController
      */
     public function edit()
     {
-        return view('posts/edit');
+        $isNumber = preg_match('/^[1-9][0-9]*$/', $_GET['id']);
+
+        if ($isNumber) {
+            $Post = model('Post');
+            $post = $Post->find($_GET['id']);
+
+            return view('posts/edit', compact('post'));
+        } else {
+            return redirect('/posts');
+        }
     }
 
     /**

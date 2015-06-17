@@ -36,14 +36,14 @@
             <div class="form-group">
                 <label for="titleField" class="col-lg-2 control-label">Title</label>
                 <div class="col-lg-10">
-                    <input type="text" class="form-control" id="titleField" name="title" placeholder="Title">
+                    <input type="text" class="form-control" id="titleField" name="title" placeholder="Title" value="<?=$post[0]['title']?>">
                 </div>
             </div>
 
             <div class="form-group">
                 <label for="textArea" class="col-lg-2 control-label">Post content</label>
                 <div class="col-lg-10">
-                    <textarea class="form-control" rows="3" id="textArea" name="content"></textarea>
+                    <textarea class="form-control" rows="3" id="textArea" name="content"><?=$post[0]['content']?></textarea>
                 </div>
             </div>
 
